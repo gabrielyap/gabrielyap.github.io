@@ -1,0 +1,49 @@
+---
+import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+import ToggleTheme from './ui/ThemeToggle.astro';
+
+const menuItems = [
+	{
+		title: 'About',
+		path: '/about',
+	},
+	{
+		title: 'Projects',
+		path: '/projects',
+	},
+	{
+		title: 'Contact',
+		path: 'https://www.linkedin.com/in/gabriel-yap26/',
+	},
+];
+---
+<!-- Styled for dropdown/mobile then use sm: for desktop view -->
+<header class="my-4 flex flex-col items-center justify-between sm:flex-row">
+	<Astronav>
+		<div class="flex w-full items-center justify-between sm:w-auto">
+			<h1 class = "text-4xl">Gabriel Yap</h1>
+			<div class="sm:hidden">
+				<MenuIcon class="h-4 w-4 text-black dark:text-white" />
+			</div>
+		</div>
+		<MenuItems class="hidden sm:flex mt-3 sm:mt-0 w-full sm:w-auto">
+			<ul class="flex flex-col sm:flex-row sm:gap-3">
+				{
+					menuItems.map((item) => (
+						<div>
+							<li>
+								<a
+									href={item.path}
+                                    aria-label="navbar path"
+									class="flex py-2 text-black dark:text-white hover:text-teal-500 dark:hover:text-teal-500 sm:px-3">
+									{item.title}
+								</a>
+							</li>
+						</div>
+					))
+				}
+				<li><ToggleTheme/></li>
+			</ul>
+		</MenuItems>
+	</Astronav>
+</header>

@@ -1,0 +1,42 @@
+<div class="theme-toggle-wrapper md:flex md:items-center">
+	<label
+		class="theme-toggle relative h-[34px] w-[60px]"
+		for="checkbox"
+	>
+		<input type="checkbox" id="checkbox" class="hidden" />
+		<div class="slider absolute bottom-0 left-0 right-0 top-0 cursor-pointer rounded-full bg-neutral-900 before:absolute before:bottom-[4px] before:left-[4px] before:h-[26px] before:w-[26px] before:rounded-full before:bg-sky-500 before:transition-[1.0s] dark:bg-sky-50" />
+	</label>
+</div>
+
+<style>
+	input:checked + .slider:before {
+		transform: translateX(26px);
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const button = document.querySelector(
+			'.theme-toggle input[type="checkbox"]'
+		) as HTMLInputElement;
+
+		const switchTheme = () => {
+			document.documentElement.classList.toggle('dark');
+			if (document.documentElement.classList.contains('dark')) {
+				localStorage.setItem('theme', 'dark');
+			}
+		};
+
+		button.addEventListener('click', () => {
+			switchTheme();
+		});
+
+		if ( // Based on user website preferences
+			localStorage.theme === 'dark' ||
+			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			switchTheme();
+		}
+
+	});
+</script>
