@@ -3,9 +3,12 @@ import { Image } from 'astro:assets';
 import portrait from "../assets/superman.jpg";
 ---
 
-<section class = "flex flex-col-reverse h-screen items-center justify-center sm:flex-row border-2  border-red-500 text-4xl">
-    <div class = 'flex w-1/2'>   
-        Hi! I'm Gabriel, a fullstack developer based in California.
+<section class = "flex flex-col-reverse h-screen items-center justify-center sm:flex-row ">
+    <div class = 'flex flex-col w-1/2 sm:ml-8'>   
+        <div class = "text-4xl">Hi! <br><br> </div>
+        <div class = "text-xl font-thin">I'm Gabriel, a fullstack developer based in California. 
+            I enjoy playing playing 🎸 electric guitar, 💪 lifting, and 🕹️ playing games.
+        </div>
     </div>
     <div class = 'flex w-1/2'>
         <Image src = {portrait} alt = "asd" width = {600} height = {600} loading = "lazy" quality={100}/>
