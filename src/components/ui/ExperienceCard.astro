@@ -1,0 +1,27 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+	thumbnail: string;
+}
+import { Image } from 'astro:assets';
+
+const { title, body, href, thumbnail } = Astro.props;
+---
+<div class = "flex flex-col sm:flex-row px-4 gap-8 ">
+	<div>
+		<Image src = {import(`../../assets/${thumbnail}.jpg`)} alt = {title} width = {500} height = {500} loading = "eager" quality={100}/>
+	</div>
+	<div class = "flex flex-col justify-center border-2 border-green-300">
+		<h2 class = "text-4xl">
+			{title}
+		</h2>
+		<p>
+			{body}
+		</p>
+	</div>
+	
+</div>
+	
+
