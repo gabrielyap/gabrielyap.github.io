@@ -9,7 +9,11 @@ export default {
 			fontFamily: {
 				sans: ["Palanquin", ...defaultTheme.fontFamily.sans],
 			},
+			colors: {
+				'lightbrown': '#f7f5f2',
+			},
 		},
+		
 	},
 	plugins: [],
 }

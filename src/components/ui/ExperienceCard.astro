@@ -9,17 +9,20 @@ import { Image } from 'astro:assets';
 
 const { title, body, href, thumbnail } = Astro.props;
 ---
-<div class = "flex flex-col sm:flex-row px-4 gap-8 ">
-	<div>
+<div class = "flex flex-col relative items-center sm:flex-row px-4 gap-8 ">
+	<div class = "flex h-auto">
 		<Image src = {import(`../../assets/${thumbnail}.jpg`)} alt = {title} width = {500} height = {500} loading = "eager" quality={100}/>
 	</div>
-	<div class = "flex flex-col justify-center border-2 border-green-300">
-		<h2 class = "text-4xl">
+	<div class = "flex flex-col h-auto justify-center gap-4 bg-lightbrown dark:bg-gray-900 p-4 sm:p-16 border-2 border-green-300 ">
+		<h2 class = "text-4xl sm:text-6xl ">
 			{title}
 		</h2>
-		<p>
+		<p class = "sm:text-2xl">
 			{body}
 		</p>
+		<a href = {href} class = "flex w-fit px-8 py-2 border-2 border-black dark:border-white hover:bg-slate-300 dark:hover:bg-slate-700">
+			SEE MORE
+		</a>
 	</div>
 	
 </div>
