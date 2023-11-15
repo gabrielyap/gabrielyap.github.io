@@ -1,28 +1,27 @@
 ---
+import Layout from '../../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import Layout from '../layouts/Layout.astro';
-import portrait from "../assets/superman.jpg";
+import portrait from "../../assets/superman.jpg";
+
 ---
 
-<Layout title = "About -- Gabriel Yap">
+<Layout title="AIVision Food -- Gabriel Yap">
 	<main>
-        <section class = "flex flex-col items-start justify-center gap-4 pt-12 md:flex-row ">
-			<div class = 'flex w-full md:w-1/2'>
+        <h1 class = "flex justify-center text-6xl">AIVision Food</h1>
+        <section class = "flex flex-col-reverse h-screen items-center justify-center gap-4 md:flex-row ">
+			<div class = 'flex w-1/2'>
 				<Image src = {portrait} alt = "Portrait" width = {600} height = {600} loading = "eager" quality={100}/>
 			</div>
 
-			<div class = 'flex flex-col w-full md:w-1/2'>   
+			<div class = 'flex flex-col w-1/2'>   
 				<div class = "text-4xl">Hello! <br><br> </div>
-				<div class = "text-xl font-light">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus quam pellentesque nec nam aliquam sem et tortor. Posuere lorem ipsum dolor sit. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Porta lorem mollis aliquam ut porttitor leo a. Volutpat ac tincidunt vitae semper. Mollis aliquam ut porttitor leo. Morbi non arcu risus quis. In nibh mauris cursus mattis molestie. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Convallis a cras semper auctor. Pharetra convallis posuere morbi leo urna molestie at elementum. Platea dictumst quisque sagittis purus sit. Et netus et malesuada fames ac turpis egestas. Posuere lorem ipsum dolor sit. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Eu mi bibendum neque egestas congue quisque egestas. Non tellus orci ac auctor augue mauris augue neque gravida. <br><br>
-				</div>
 				<div class = "text-xl font-light">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus quam pellentesque nec nam aliquam sem et tortor. Posuere lorem ipsum dolor sit. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Porta lorem mollis aliquam ut porttitor leo a. Volutpat ac tincidunt vitae semper. Mollis aliquam ut porttitor leo. Morbi non arcu risus quis. In nibh mauris cursus mattis molestie. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Convallis a cras semper auctor. Pharetra convallis posuere morbi leo urna molestie at elementum. Platea dictumst quisque sagittis purus sit. Et netus et malesuada fames ac turpis egestas. Posuere lorem ipsum dolor sit. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Eu mi bibendum neque egestas congue quisque egestas. Non tellus orci ac auctor augue mauris augue neque gravida.
 				</div>
-				
 			</div>
 		</section>
 	</main>
+
 </Layout>
 
 <style>
