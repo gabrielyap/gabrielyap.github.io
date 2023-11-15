@@ -1,44 +1,100 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import aivfhome from "../../assets/AIVFhome2.png";
 import portrait from "../../assets/superman.jpg";
 import aivffunctions from "../../assets/AIVFFunctions.png";
 ---
 
 <Layout title="AIVision Food -- Gabriel Yap">
-	<main class = "mt-12 border-0 border-blue-500">
-        <h1 class = "flex justify-center text-6xl">AIVision Food</h1>
-        <hr class="grid auto-rows-fr w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700">
-        <section class = "flex flex-col items-start justify-center gap-4 pt-12 md:max-w-full md:flex-row ">
-            <div class = 'flex flex-col w-full md:w-1/2'>   
-                <div class = "text-xl font-light">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus quam pellentesque nec nam aliquam sem et tortor. Posuere lorem ipsum dolor sit. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Porta lorem mollis aliquam ut porttitor leo a. Volutpat ac tincidunt vitae semper. Mollis aliquam ut porttitor leo. Morbi non arcu risus quis. In nibh mauris cursus mattis molestie. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Convallis a cras semper auctor. Pharetra convallis posuere morbi leo urna molestie at elementum. Platea dictumst quisque sagittis purus sit. Et netus et malesuada fames ac turpis egestas. Posuere lorem ipsum dolor sit. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Eu mi bibendum neque egestas congue quisque egestas. Non tellus orci ac auctor augue mauris augue neque gravida. <br><br>
+    <main class="mt-12 border-0 border-blue-500">
+        <div>
+            <h1 class="flex justify-center text-6xl">AIVision Food</h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+            <h2 class="flex justify-center text-2xl my-4 font-medium">
+                March 2023 - September 2023
+            </h2>
+            <h2 class="flex justify-center mx-auto w-1/2 font-light">
+                An overview of my work as a Software Developer Intern at
+                AIVision Food, an AgTech startup launched from Davis,
+                California. I mainly worked on the remote monitoring and
+                management (RMM) website for the USDA-funded Insect Detection
+                Project to detect insect infestation in large scale food
+                storages.
+            </h2>
+        </div>
+
+        <div class="my-12">
+            <h1 class="flex justify-center text-4xl my-4">Key Tasks</h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+        </div>
+
+        <section
+            class="flex flex-col items-start justify-center gap-4 pt-12 md:max-w-full md:flex-row"
+        >
+            <div class="flex flex-col w-full md:w-1/2">
+                <div class="text-xl font-light">
+                    <div class = "font-bold">Implementing new features</div>
+                    Once I became familiar with the website architecture and codebase, I took on the task of migrating 5 core aws functions from the mobile to website.
                 </div>
             </div>
-            <div class = 'flex w-full md:w-1/2'>
-                <Image src = {aivfhome} alt = "aivfhome" width = {750} height = {600} loading = "eager" quality={100}/>
+            <div class="flex w-full md:w-1/2">
+                <Image
+                    src={aivfhome}
+                    alt="aivfhome"
+                    width={750}
+                    height={600}
+                    loading="eager"
+                    quality={100}
+                />
             </div>
-
-            
         </section>
-            <section class = "flex flex-col-reverse items-start justify-center gap-4 pt-12 md:flex-row md:max-w-full border-0">
-                <div class = 'flex flex-row object-fill w-full md:w-1/2 border- border-red-400'>
-                    <Image src = {aivffunctions} alt = "Portrait" width = {750} height = {600} loading = "eager" quality={100}/>
-                </div>
+        <section
+            class="flex flex-col-reverse items-start justify-center gap-4 pt-12 md:flex-row md:max-w-full border-0"
+        >
+            <div
+                class="flex flex-row object-fill w-full md:w-1/2 border- border-red-400"
+            >
+                <Image
+                    src={aivffunctions}
+                    alt="Portrait"
+                    width={750}
+                    height={600}
+                    loading="eager"
+                    quality={100}
+                />
+            </div>
 
-                <div class = 'flex flex-col w-full md:w-1/2'>   
-                    <div class = "text-xl font-light">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus quam pellentesque nec nam aliquam sem et tortor. Posuere lorem ipsum dolor sit. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Porta lorem mollis aliquam ut porttitor leo a. Volutpat ac tincidunt vitae semper. Mollis aliquam ut porttitor leo. Morbi non arcu risus quis. In nibh mauris cursus mattis molestie. In ornare quam viverra orci sagittis eu volutpat odio facilisis. Convallis a cras semper auctor. Pharetra convallis posuere morbi leo urna molestie at elementum. Platea dictumst quisque sagittis purus sit. Et netus et malesuada fames ac turpis egestas. Posuere lorem ipsum dolor sit. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Eu mi bibendum neque egestas congue quisque egestas. Non tellus orci ac auctor augue mauris augue neque gravida. <br><br>
-                    </div>
-                    
+            <div class="flex flex-col w-full md:w-1/2">
+                <div class="text-xl font-light">
+                    <div class = "font-bold">Fine-tuning frontend elements</div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Tempus quam pellentesque nec nam aliquam sem et
+                    tortor. Posuere lorem ipsum dolor sit. Nulla facilisi cras
+                    fermentum odio eu feugiat pretium nibh. Porta lorem mollis
+                    aliquam ut porttitor leo a. Volutpat ac tincidunt vitae
+                    semper. Mollis aliquam ut porttitor leo. Morbi non arcu
+                    risus quis. In nibh mauris cursus mattis molestie. In ornare
+                    quam viverra orci sagittis eu volutpat odio facilisis.
+                    Convallis a cras semper auctor. Pharetra convallis posuere
+                    morbi leo urna molestie at elementum. Platea dictumst
+                    quisque sagittis purus sit. Et netus et malesuada fames ac
+                    turpis egestas. Posuere lorem ipsum dolor sit. Commodo quis
+                    imperdiet massa tincidunt nunc pulvinar sapien et. Eu mi
+                    bibendum neque egestas congue quisque egestas. Non tellus
+                    orci ac auctor augue mauris augue neque gravida. <br /><br
+                    />
                 </div>
-		    </section>
-           
-	</main>
-
+            </div>
+        </section>
+    </main>
 </Layout>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
 </style>
