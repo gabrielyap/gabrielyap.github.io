@@ -1,0 +1,164 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import aivfhome from "../../assets/AIVFhome2.png";
+import aivferrors from "../../assets/AIVFErrors.png";
+import aivffunctions from "../../assets/AIVFFunctions.png";
+import aivfmobile from "../../assets/AIVFmobile.png";
+---
+
+<Layout title="AIVision Food -- Gabriel Yap">
+    <main class="mt-12 border-0 border-blue-500">
+        <div>
+            <h1 class="flex justify-center text-6xl">AIVision Food</h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+            <h2 class="flex justify-center text-2xl my-4 font-medium">
+                March 2023 - September 2023
+            </h2>
+            <h2 class="flex justify-center mx-auto w-1/2 font-light">
+                An overview of my work as a Software Developer Intern at
+                AIVision Food, an AgTech startup launched from Davis,
+                California. I mainly worked on the remote monitoring and
+                management (RMM) website for the USDA-funded Insect Detection
+                Project, assisting farms in detecting insect infestation in
+                large scale food storages by using the company's product,
+                "SmartProbes".
+            </h2>
+        </div>
+        <div class="my-12">
+            <h1 class="flex justify-center text-4xl my-4">
+                Greatest Achievement
+            </h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+        </div>
+        <section
+            class="flex flex-col items-start justify-center gap-4 pt-12 md:max-w-full md:flex-row"
+        >
+            <div class="flex flex-col w-full md:w-1/2">
+                <div class="text-xl font-light">
+                    <div class="font-bold">Solved A Website-Crashing Bug</div>
+                     I would say that the greatest code push I've made at the
+                    company is my solution for a consistent website-crashing
+                    bug! Ever since the start of my job, I would notice that the
+                    website would frequently crash or improperly load data. As I
+                    spent more months at the company, I was eventually tasked
+                    with fixing the data loading issue. My first solution was
+                    inelegant, messy, and relied on unstable variables to
+                    correct the issue, but it got the job done! I spent more
+                    time on the issue, and thought to myself, "maybe I have to
+                    look at the bigger picture". By focusing more on the parent
+                    components, I eventually came up with an elegant solution which
+                    involved <span class = "font-semibold">refactoring the React code</span>.
+                    As a result, I reduced the amount of API calls needed by 50%, fixed
+                    the issue of data improperly loading, and because of that, also
+                    stopped the website from crashing! <br><br>
+                    *Image blurred intentionally.
+                </div>
+            </div>
+            <div class="flex w-full md:w-1/2">
+                <Image
+                    src={aivferrors}
+                    alt="aivfhome"
+                    width={750}
+                    height={400}
+                    loading="eager"
+                    quality={100}
+                />
+            </div>
+        </section>
+        <div class="my-12">
+            <h1 class="flex justify-center text-4xl my-4">Responsibilities</h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+        </div>
+
+        <section
+            class="flex flex-col items-start justify-center gap-4 pt-12 md:max-w-full md:flex-row"
+        >
+            <div class="flex flex-col w-full md:w-1/2">
+                <div class="text-xl font-light">
+                    <div class="font-bold">Implementing New Features</div>
+                     As part of my role, I was responsible for integrating new
+                    features for our web application. My first large-scale task
+                    was to implement the 5 core AWS API calls from the mobile
+                    app into the website by using <span class="font-semibold"
+                        >JavaScript</span
+                    >,
+                    <span class="font-semibold">React</span>, and <span
+                        class="font-semibold">SASS</span
+                    >. I created a button on the home page that, when clicked,
+                    opened a modal of options that correspond to each API call.
+                    Each call would access the Redux store and perform functions
+                    such as creating new sessions, deleting data, or removing
+                    SmartProbes. As a result, the app's cross-platform
+                    experience was greatly enhanced, and users can perform the
+                    same functions on the website that were formerly only
+                    available through the mobile app.
+                </div>
+            </div>
+            <div class="flex w-full md:w-1/2">
+                <Image
+                    src={aivffunctions}
+                    alt="aivfhome"
+                    width={750}
+                    height={600}
+                    loading="eager"
+                    quality={100}
+                />
+            </div>
+        </section>
+        <section
+            class="flex flex-col-reverse items-start justify-center gap-4 pt-12 md:flex-row md:max-w-full border-0"
+        >
+            <div
+                class="flex flex-row object-fill w-full md:w-1/2 border- border-red-400"
+            >
+                <Image
+                    src={aivfmobile}
+                    alt="Portrait"
+                    width={750}
+                    height={600}
+                    loading="eager"
+                    quality={100}
+                />
+            </div>
+
+            <div class="flex flex-col w-full md:w-1/2">
+                <div class="text-xl font-light">
+                    <div class="font-bold">Fine-tuning frontend elements</div>
+                     Consistently throughout my time at AIVF, creating and
+                    stylizing frontend elements was a major responsibility of
+                    mine. The tasks I've completed involve resizing and
+                    realligning items on the dashboard, correcting image popout
+                    functionalities, and creating a dropdown menu from scratch
+                    for responsive design. I mainly used <span
+                        class="font-semibold">React</span
+                    >, <span class="font-semibold">SASS</span>, and <span
+                        class="font-semibold">MUI</span
+                    > for these features. After I completed a task, I would have
+                    to present my work and the new website visual to the
+                    software team and the head of the company, and tune the work
+                    according to the design critique I received. By the end of
+                    my term, I created and refined over 20 elements of the
+                    frontend.
+                    <br /><br />
+                </div>
+            </div>
+        </section>
+        <div class="my-12">
+            <h1 class="flex justify-center text-4xl my-4">Screenshots and Video Demo</h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+        </div>
+    </main>
+</Layout>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+</style>
