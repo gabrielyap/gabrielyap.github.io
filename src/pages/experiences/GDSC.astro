@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import gdscglobalchat from "../../assets/GDSCglobalchat.png";
+
+---
+
+<Layout title="AIVision Food -- Gabriel Yap">
+    <main class="mt-12 border-0 border-blue-500">
+        <div>
+            <h1 class="flex justify-center text-5xl">
+                Google Developer Student Club @ UC Davis
+            </h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+            <h2 class="flex justify-center text-2xl my-4 font-medium">
+                November 2022 - June 2023
+            </h2>
+            <h2 class="flex justify-center mx-auto w-1/2 font-light">
+                While attending UC Davis, I joined the Google Developer Student
+                Club to gain experience in the software development life cycle,
+                as well as the priceless experience of working together in a
+                team. With a small scrum team, we built a full-stack chat app
+                using Google Firebase as the main technology.
+            </h2>
+        </div>
+        <div class="my-12">
+            <h1 class="flex justify-center text-4xl my-4">Timeline</h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+        </div>
+        <section
+            class="flex flex-col items-start justify-center gap-4 pt-12 md:max-w-full md:flex-row"
+        >
+            <div class="flex flex-col w-full md:w-1/2">
+                <div class="text-xl font-light">
+                    <div class="font-bold">Frontend Engineer</div>
+                     At the start of the quarter, I was placed into a team of 5
+                    where everyone had interest in web development.
+                    Collectively, we all decided we wanted to make a fullstack
+                    chat app that uses Google Firebase as the main backend and
+                    website hosting service. Since it was all of our first times
+                    working on a software project as a team, with no concrete
+                    goals/deadlines like in classes, we had to learn many things
+                    together. These include version control, task delegation,
+                    Agile Methodologies, and more. My main role was to develop
+                    and stylize the frontend by using
+                    <span class="font-semibold">React</span>. I used hooks and
+                    made components to construct the website architecture, and
+                    used CSS for responsiveness. At the end of the quarter, we
+                    presented our project to a lecture hall of 120+ students and
+                    aspiring developers.
+                    <br /><br />
+                     Through my activity in the club, I learned a lot about the
+                    challenges one may face while working in a team. Things
+                    might not always go as planned, and a team must be able to
+                    adapt. However, I believe that the feeling of accomplishment
+                    that comes with completing a group project makes it all
+                    worth it. After all the time spent brainstorming,
+                    developing, preparing, and presenting, it feels great to
+                    know that we, a group of undergrads who were complete
+                    strangers, can output a product if we were committed enough.
+                    It was truly an honor to work with my peers.
+                </div>
+            </div>
+            <div class="flex w-full md:w-1/2">
+                <Image
+                    src={gdscglobalchat}
+                    alt="aivfhome"
+                    width={750}
+                    height={600}
+                    loading="eager"
+                    quality={100}
+                />
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+</style>
