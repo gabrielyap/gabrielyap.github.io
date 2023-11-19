@@ -1,10 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import aivferrors from "../../assets/AIVFErrors.png";
-import aivffunctions from "../../assets/AIVFFunctions.png";
-import aivfmobile from "../../assets/AIVFMobile.png";
 import mmhomepage from "../../assets/MMHomepage2.png";
+import mmsearch from "../../assets/MMSearch.png";
+import mmuploadprocess from "../../assets/MMUploadProcess.png";
+import mmlogin from "../../assets/MMLogin.png";
+import mmviewimage from "../../assets/MMviewimage.png";
 ---
 
 <Layout title="Mongo Museum -- Gabriel Yap">
@@ -18,13 +19,14 @@ import mmhomepage from "../../assets/MMHomepage2.png";
                 A fullstack image sharing and hosting app I made using the MERN
                 stack, Tailwind, and Next.js. The app is complete with user
                 authentication/authorization, comments, a label-based search
-                function, a custom backend server to handle CRUD operations, and more. 
+                function, a custom backend server to handle CRUD operations, and
+                more.
             </h2>
-          
+
             <div class="flex justify-center mx-auto w-3/4 font-light my-10">
                 <Image
                     src={mmhomepage}
-                    alt="aivfhome"
+                    alt="mmhomepage"
                     width={1525}
                     height={884}
                     loading="eager"
@@ -39,27 +41,94 @@ import mmhomepage from "../../assets/MMHomepage2.png";
             />
         </div>
         <section
-            class="grid grid-cols-2 items-start justify-center pt-12 gap-8 md:max-w-full md:flex-row"
+            class="grid md:grid-cols-2 auto-rows-max items-start justify-center pt-12 gap-8 gap-y-16"
         >
-            <div class="flex justify-center mx-auto font-light">
+            <div class="flex flex-col justify-center mx-auto font-light">
                 <Image
-                    src={mmhomepage}
-                    alt="aivfhome"
+                    src={mmuploadprocess}
+                    alt="mmuploadprocess"
                     width={1525}
                     height={884}
                     loading="eager"
                     quality={100}
                 />
+                <div class="flex flex-col w-full">
+                    <div class="text-xl font-light">
+                        <div class="font-bold">Image Uploading</div>
+                         Users can upload an image either by drag and drop or
+                        file select. They are taken to a loading screen, then
+                        taken to the gallery, where their image and sharable
+                        link are displayed.
+                    </div>
+                </div>
             </div>
-            <div class="flex justify-center mx-auto font-light">
+            <div class="flex flex-col justify-center mx-auto font-light">
                 <Image
-                    src={mmhomepage}
-                    alt="aivfhome"
+                    src={mmsearch}
+                    alt="mmsearch"
                     width={1525}
                     height={884}
                     loading="eager"
                     quality={100}
                 />
+                <div class="flex flex-col w-full">
+                    <div class="text-xl font-light">
+                        <div class="font-bold">Prefix Search Function</div>
+                         Users can quickly find specific photos by using the
+                        prefix search function. For example, photos labelled
+                        "superhero" will still show up even when the search
+                        query is only "super".
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center mx-auto font-light">
+                <Image
+                    src={mmlogin}
+                    alt="mmlogin"
+                    width={1525}
+                    height={884}
+                    loading="eager"
+                    quality={100}
+                />
+                <div class="flex flex-col w-full">
+                    <div class="text-xl font-light">
+                        <div class="font-bold">User Register/Login Screens</div>
+                         I used Passport.js to implement a local strategy for
+                        user registration and authentication/authorization,
+                        storing user information on a MongoDB Atlas cloudbase.
+                        The browser tracks the currently signed in user through
+                        local storage.
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center mx-auto font-light">
+                <div class="">
+                    <Image
+                        src={mmviewimage}
+                        alt="mmviewimage"
+                        width={1525}
+                        height={884}
+                        loading="eager"
+                        quality={100}
+                    />
+                </div>
+
+                <div class="flex flex-col w-full">
+                    <div class="text-xl font-light">
+                        <div class="font-bold">
+                            CRUD Operations for Image and Comments
+                        </div>
+                         The user can click on an image from the gallery, which
+                        routes them to a new page that shows the label, author,
+                        and comments. Anyone can copy the image link and post a
+                        comment, but only the author can edit the label or
+                        delete the image. Users can also delete their own
+                        comments. I used Mongoose and Express to create User and
+                        Image schemas, and used Passport to authorize a user's
+                        actions.
+                    </div>
+                </div>
             </div>
         </section>
     </main>
