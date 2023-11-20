@@ -20,7 +20,7 @@ const { title, body, href, thumbnail } = Astro.props;
 		<p class = "lg:text-2xl">
 			{body}
 		</p>
-		<a href = {href} class = "flex w-fit px-8 py-2 border-2 border-black dark:border-white hover:bg-slate-300 dark:hover:bg-slate-700">
+		<a href = {href} class = "flex w-fit px-8 py-2 border-2 border-black dark:border-white hover:bg-slate-300 dark:hover:bg-slate-700" aria-label = "SEE MORE">
 			SEE MORE
 		</a>
 	</div>

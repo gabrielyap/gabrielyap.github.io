@@ -1,0 +1,47 @@
+---
+import ProjectCard from "./ui/ProjectCard.astro";
+---
+
+<section
+    class="flex flex-col justify-center items-center mt-32 border-0 border-cyan-800"
+>
+    <h1 class="flex text-4xl text-center font-light">Personal Projects</h1>
+    <div
+        class="grid grid-cols-2 place-items-center mt-8 gap-8 border-0 border-blue-300"
+    >
+        <ProjectCard
+            title="Mongo Museum"
+            body="A fullstack image sharing app I made using the MERN stack. "
+            href="/projects/mongomuseum"
+            thumbnail="camera-flat"
+            repo="https://github.com/gabrielyap/mongo-museum"
+        />
+        <ProjectCard
+            title="MyMovieList"
+            body='A movie searching app made using the T3 Stack (TypeScript, Tailwind, Next.js). This app uses the "The Movie Database" API to make searchy queries based on movie title, popularity, rating, and release date. '
+            href="#"
+            thumbnail="watching-a-movie"
+            repo="https://github.com/gabrielyap/mymovielist"
+        />
+        <!-- <ProjectCard
+            title="GDSC @ UC Davis"
+            body="During my time at UC Davis, I joined the Google Developer Student Club as a Frontend Engineer."
+            href="/experiences/gdsc"
+            thumbnail="GDSCLogo"
+            repo="https://github.com/gabrielyap/mongo-museum"
+        />
+        <ProjectCard
+            title="GDSC @ UC Davis"
+            body="During my time at UC Davis, I joined the Google Developer Student Club as a Frontend Engineer."
+            href="/experiences/gdsc"
+            thumbnail="GDSCLogo"
+            repo="https://github.com/gabrielyap/mongo-museum"
+        /> -->
+    </div>
+    <!-- <div class = 'grid grid-cols-2 auto-rows-fr mt-8 gap-8 border-0 border-blue-300 '>   
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+    </div> -->
+</section>

@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+	thumbnail: string;
+    repo: string;
+}
+import { Image } from 'astro:assets';
+
+const { title, body, href, thumbnail, repo } = Astro.props;
+---
+
+
+
+
+<div class="flex flex-col h-full w-full bg-lightbrown border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class = "flex justify-center items-center h-96 overflow-hidden">
+        <Image class="object-contain" src = {import(`../../assets/${thumbnail}.png`)} alt = {title}  loading = "eager" quality={100}/>
+
+    </div>
+    <div class="flex flex-col p-5">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            {body}  
+            <a class = "underline font-semibold text-blue-700" href = {repo}>GitHub Repo</a>
+        </p>
+        <a href = {href} class = "flex w-fit px-8 py-2 border-2 border-black dark:border-white hover:bg-slate-300 dark:hover:bg-slate-700" aria-label = "SEE MORE">
+			SEE MORE
+		</a>
+    </div>
+</div>
