@@ -1,4 +1,5 @@
 ---
+import ExperienceCard from "./ui/ExperienceCard.astro";
 import ProjectCard from "./ui/ProjectCard.astro";
 ---
 
@@ -7,7 +8,25 @@ import ProjectCard from "./ui/ProjectCard.astro";
 >
     <h1 class="flex text-4xl text-center font-light">Personal Projects</h1>
     <div
-        class="grid grid-cols-2 place-items-center mt-8 gap-8 border-0 border-blue-300"
+        class="grid auto-rows-fr mt-8 gap-8 md:hidden border-0 border-blue-300"
+    >
+        <ExperienceCard
+            title="Mongo Museum"
+            body="A fullstack image sharing app I made using the MERN stack. "
+            href="/projects/mongomuseum"
+            thumbnail="camera-flat"
+            repo="https://github.com/gabrielyap/mongo-museum"
+        />
+        <ExperienceCard
+            title="MyMovieList"
+            body='A movie searching app made using the T3 Stack (TypeScript, Tailwind, Next.js). This app uses the "The Movie Database" API to make searchy queries based on movie title, popularity, rating, and release date. '
+            href="#"
+            thumbnail="watching-a-movie"
+            repo="https://github.com/gabrielyap/mymovielist"
+        />
+    </div>
+    <div
+        class="hidden md:grid grid-cols-2 place-items-center mt-8 gap-8 border-0 border-blue-300"
     >
         <ProjectCard
             title="Mongo Museum"
