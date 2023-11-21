@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import lcblurring1 from "../../assets/lcblurring1.png";
+---
+
+<Layout title="Leetcode Blurring -- Gabriel Yap">
+    <main class="flex flex-col mt-12 border-0 border-blue-500">
+        <div class="flex flex-col">
+            <h1 class="flex justify-center text-6xl">Leetcode Blurring</h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+            <h2 class="flex justify-center mx-auto w-full md:w-1/2 font-light">
+                Have you ever tried revisiting a Leetcode problem for practice,
+                only to have the solution spoiled to you by your previous
+                solution? This Google Chrome extension censors the code editor
+                until you decide to reset the editor to default code! Simply click 
+                on the top of the editor to remove the black box.
+            </h2>
+
+            <div
+                class="flex justify-center mx-auto w-full md:w-3/4 font-light my-10"
+            >
+                <Image
+                    src={lcblurring1}
+                    alt="lcblurring1"
+                    width={1525}
+                    height={884}
+                    loading="eager"
+                    quality={100}
+                />
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+</style>

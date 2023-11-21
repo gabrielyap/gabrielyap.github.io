@@ -4,7 +4,8 @@ import ProjectCard from "./ui/ProjectCard.astro";
 ---
 
 <section
-    class="flex flex-col justify-center items-center mt-32 border-0 border-cyan-800" id = "projects"
+    class="flex flex-col justify-center items-center mt-32 border-0 border-cyan-800"
+    id="projects"
 >
     <h1 class="flex text-4xl text-center font-light">Personal Projects</h1>
     <div
@@ -24,6 +25,20 @@ import ProjectCard from "./ui/ProjectCard.astro";
             thumbnail="watching-a-movie"
             repo="https://github.com/gabrielyap/mymovielist"
         />
+        <ExperienceCard
+            title="Leetcode Blurring"
+            body="Have you ever tried revisiting a Leetcode problem for practice, only to have the solution spoiled to you by your previous solution? This Google Chrome extension censors the code editor until you decide to reset the editor to default code! "
+            href="/projects/lcblurring"
+            thumbnail="leetcodelogo"
+            repo="https://github.com/gabrielyap/lc-blurring"
+        />
+        <ExperienceCard
+            title="Lucy's Trials"
+            body="Play as a melee knight or ranged sorceress, and battle your way through hoards of goblins in a procedurally generated dungeon! This is a 2D, 8-Bit Roguelike built with Unity and C# that I made with my team in ECS189L - Gameplay Programming at UC Davis. "
+            href="/projects/lucy"
+            thumbnail="lucyhome"
+            repo="https://github.com/ConanoftheUnreal/ECS189L-Final-Project"
+        />
     </div>
     <div
         class="hidden md:grid grid-cols-2 place-items-center mt-8 gap-8 border-0 border-blue-300"
@@ -42,20 +57,20 @@ import ProjectCard from "./ui/ProjectCard.astro";
             thumbnail="watching-a-movie"
             repo="https://github.com/gabrielyap/mymovielist"
         />
-        <!-- <ProjectCard
-            title="GDSC @ UC Davis"
-            body="During my time at UC Davis, I joined the Google Developer Student Club as a Frontend Engineer."
-            href="/experiences/gdsc"
-            thumbnail="GDSCLogo"
-            repo="https://github.com/gabrielyap/mongo-museum"
+        <ProjectCard
+            title="Leetcode Blurring"
+            body="Have you ever tried revisiting a Leetcode problem for practice, only to have the solution spoiled to you by your previous solution? This Google Chrome extension censors the code editor until you decide to reset the editor to default code! "
+            href="/projects/lcblurring"
+            thumbnail="leetcodelogo"
+            repo="https://github.com/gabrielyap/lc-blurring"
         />
         <ProjectCard
-            title="GDSC @ UC Davis"
-            body="During my time at UC Davis, I joined the Google Developer Student Club as a Frontend Engineer."
-            href="/experiences/gdsc"
-            thumbnail="GDSCLogo"
-            repo="https://github.com/gabrielyap/mongo-museum"
-        /> -->
+            title="Lucy's Trials"
+            body="Play as a melee knight or ranged sorceress, and battle your way through hoards of goblins in a procedurally generated dungeon! This is a 2D, 8-Bit Roguelike built with Unity and C# that I made with my team in ECS189L - Gameplay Programming at UC Davis. "
+            href="/projects/lucy"
+            thumbnail="lucyhome"
+            repo="https://github.com/ConanoftheUnreal/ECS189L-Final-Project"
+        />
     </div>
     <!-- <div class = 'grid grid-cols-2 auto-rows-fr mt-8 gap-8 border-0 border-blue-300 '>   
         <div>01</div>
