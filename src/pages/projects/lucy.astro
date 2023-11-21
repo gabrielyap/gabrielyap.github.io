@@ -1,18 +1,36 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import { YouTube } from "@astro-community/astro-embed-youtube";
 import lucy1 from "../../assets/lucy1.png";
 import lucy2 from "../../assets/lucy2.png";
+import lucyhome from "../../assets/lucyhome.png";
+import lucyshop from "../../assets/lucyshop.png";
+import lucypause from "../../assets/lucypause.png";
+import lucyhowto from "../../assets/lucyhowto.png";
+import lucytitle from "../../assets/lucytitle.png";
 ---
 
 <Layout title="Lucy's Trials -- Gabriel Yap">
     <main class="flex flex-col mt-12 border-0 border-blue-500">
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center">
             <h1 class="flex justify-center text-6xl">Lucy's Trials</h1>
             <hr
                 class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
             />
-            <h2 class="flex justify-center mx-auto w-full md:w-1/2 font-light">
+            <a
+                class="flex justify-center underline"
+                href="https://luciferstrials.itch.io/lucifers-trials"
+                >itch.io Link</a
+            >
+            <a
+                class="flex justify-center mt-4 underline"
+                href="https://play.unity.com/mg/other/webgl-builds-360178"
+                >WebGL Playable Build</a
+            >
+            <h2
+                class="flex justify-center mx-auto mt-6 w-full md:w-1/2 font-light"
+            >
                 A Roguelite with procedurally generated rooms. To start, the
                 player will pick between a melee knight or a ranged sorceress,
                 then walk into the castle. They’ll battle their way through
@@ -25,32 +43,162 @@ import lucy2 from "../../assets/lucy2.png";
                 throughout death, which provides incentive for longer play
                 sessions, even after the player dies.
             </h2>
+            <div class="my-12">
+                <h1 class="flex justify-center text-4xl my-4">Trailer</h1>
+                <hr
+                    class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+                />
+            </div>
+            <div class="flex max-w-full md:w-3/4">
+                <iframe
+                    width={1280}
+                    height={720}
+                    src="https://www.youtube.com/embed/RlTm4MxdVE0?si=UFu3XN6yavw9D5MR"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="my-12">
+            <h1 class="flex justify-center text-4xl my-4">Role</h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+        </div>
+        <section
+            class="flex flex-col items-start justify-center gap-4 pt-12 md:max-w-full md:flex-row"
+        >
+            <div class="flex flex-col w-full md:w-1/2">
+                <div class="text-xl font-light">
+                    <div class="font-bold">User Interface</div>
+                     Most of my prior experiences and projects have been more
+                    logical work, whether it's developing a backend or a
+                    frontend. Seeking the opportunity to try something new, I
+                    volunteered to take on the User Interface responsibility for
+                    the team. The first thing I worked on was our basic Health
+                    UI and Player Health logic and our SP gauge and pickups. The
+                    health later got put into a combined script with the
+                    players' stats and we had to scrap our SP and special moves
+                    idea due to time, so they are no longer in the main code. I
+                    also made the Main Menu, Death Screen, and Pause Menu. These
+                    additions were all complete with working buttons that either
+                    change the scene or use a script to add or remove components
+                    in the Unity Canvas. <br /><br />
+                    <div class="font-bold">Press Kit and Trailer</div>
+                     Staying on theme with user perception, I also took on the
+                    responsibility of producing the trailer and making the press
+                    kit. One thing I kept in mind while making the presskit was
+                    that I wanted it to be on a website where users can look at
+                    the game's screenshots, the trailer, and descriptions of the
+                    game all in one area. I decided to use itch.io since it met
+                    all of these requirements, while also being easy to set up.
+                    For the trailer, I used OBS to record all of the clips, and
+                    Microsoft ClipChamp to edit it all together. In the trailer,
+                    I wanted to show all of the important features of our game
+                    including combat, gold pickups, purchasing upgrades, the two
+                    classes, and I finally wanted to show that the dungeon is
+                    big and different every time. I explicitly recorded
+                    fast-paced clips that captured the difficulty and fast
+                    mechanics one must have to beat a room (at least as a
+                    knight). Similarly, I chose the screenshots for the same
+                    reason. I wanted to show off combat, the prerun area, and
+                    the shop GUI.
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 w-full md:w-1/2">
+                <div class="flex flex-col">
+                    <Image
+                        src={lucytitle}
+                        alt="lucytitle"
+                        width={750}
+                        height={400}
+                        loading="eager"
+                        quality={100}
+                    />
+                    <h3 class="mt-4 text-center">Title Screen</h3>
+                </div>
 
-            <div
-                class="flex justify-center mx-auto w-full md:w-3/4 font-light my-10"
-            >
+                <div class="flex flex-col">
+                    <Image
+                        src={lucyhowto}
+                        alt="lucyhowto"
+                        width={750}
+                        height={400}
+                        loading="eager"
+                        quality={100}
+                    />
+                    <h3 class="mt-4 text-center">How To Play</h3>
+                </div>
+
+                <div class="flex flex-col">
+                    <Image
+                        src={lucypause}
+                        alt="lucypause"
+                        width={750}
+                        height={400}
+                        loading="eager"
+                        quality={100}
+                    />
+                    <h3 class="mt-4 text-center">Pause Screen</h3>
+                </div>
+            </div>
+        </section>
+        <div class="my-12">
+            <h1 class="flex justify-center text-4xl my-4">Game Screenshots</h1>
+            <hr
+                class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+            />
+        </div>
+        <section
+            class="grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 border-0 border-blue-300"
+        >
+            <div class="flex flex-col">
+                <Image
+                    src={lucyhome}
+                    alt="lucyhome"
+                    width={750}
+                    height={400}
+                    loading="eager"
+                    quality={100}
+                />
+                <h3 class="mt-4 text-center">Starting Point</h3>
+            </div>
+            <div class="flex flex-col">
+                <Image
+                    src={lucyshop}
+                    alt="lucyshop"
+                    width={750}
+                    height={400}
+                    loading="eager"
+                    quality={100}
+                />
+                <h3 class="mt-4 text-center">Shop</h3>
+            </div>
+
+            <div class="flex flex-col">
                 <Image
                     src={lucy1}
                     alt="lucy1"
-                    width={1525}
-                    height={884}
+                    width={750}
+                    height={400}
                     loading="eager"
                     quality={100}
                 />
+                <h3 class="mt-4 text-center">Knight Gameplay</h3>
             </div>
-            <div
-                class="flex justify-center mx-auto w-full md:w-3/4 font-light my-10"
-            >
+
+            <div class="flex flex-col">
                 <Image
                     src={lucy2}
                     alt="lucy2"
-                    width={1525}
-                    height={884}
+                    width={750}
+                    height={400}
                     loading="eager"
                     quality={100}
                 />
+                <h3 class="mt-4 text-center">Sorceress Gameplay</h3>
             </div>
-        </div>
+        </section>
     </main>
 </Layout>
 
