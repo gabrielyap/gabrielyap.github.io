@@ -23,8 +23,13 @@ import mymovielisthome from "../../assets/mymovielisthome.png";
                 development more clear and I was able to fix logistical errors
                 before they appeared as a larger problem later.
             </h2>
-
-            <div class="flex justify-center mx-auto w-full md:w-3/4 font-light my-10">
+            <div class="my-12">
+                <h1 class="flex justify-center text-4xl my-4">Screenshots</h1>
+                <hr
+                    class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
+                />
+            </div>
+            <div class="flex flex-col justify-center mx-auto w-full md:w-3/4 font-light gap-2">
                 <Image
                     src={mymovielisthome}
                     alt="mymovielisthome"
@@ -33,8 +38,11 @@ import mymovielisthome from "../../assets/mymovielisthome.png";
                     loading="eager"
                     quality={100}
                 />
+                <h2 class = "text-gray-600 dark:text-gray-300">Home Screen. Movies are shown as cards in a grid with the poster, title and description. User can search by popularity, top, and upcoming.</h2>
             </div>
-            <div class="flex justify-center mx-auto w-full md:w-3/4 font-light my-10">
+            <div
+                class="flex flex-col justify-center mx-auto w-full md:w-3/4 font-light my-10 gap-2"
+            >
                 <Image
                     src={mymovielistsearch}
                     alt="mymovielistsearch"
@@ -43,6 +51,7 @@ import mymovielisthome from "../../assets/mymovielisthome.png";
                     loading="eager"
                     quality={100}
                 />
+                <h2 class = "text-gray-600 dark:text-gray-300">Search function. The search query, "toy st", will send a GET request with those parameters to the TMDB API, which then returns the data (the most relevant movies to "toy st").</h2>
             </div>
         </div>
     </main>
