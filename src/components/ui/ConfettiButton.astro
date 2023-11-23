@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import confetti from "../../assets/confetti.png";
+---
+
+
+<div data-confetti-button class ="border-8 border-indigo-200 rounded-full hover: cursor-pointer transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300 ...">
+    <Image src = {confetti} alt = "Portrait" width = {400} height = {400} loading = "eager" quality={100}/>
+</div>
+
+
+<script>
+    import confetti from "canvas-confetti";
+
+    // Find our component DOM on the page.
+    const buttons = document.querySelectorAll("[data-confetti-button]");
+
+    // Add event listeners to fire confetti when a button is clicked.
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => confetti());
+    });
+</script>
