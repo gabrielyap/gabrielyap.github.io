@@ -10,13 +10,19 @@ import confetti from "../../assets/confetti.png";
 
 
 <script>
-    import confetti from "canvas-confetti";
+    const newWindowObject = window as any;
+    const confetti = newWindowObject.confetti;
 
-    // Find our component DOM on the page.
+    // Finding component DOM on the page.
     const buttons = document.querySelectorAll("[data-confetti-button]");
 
     // Add event listeners to fire confetti when a button is clicked.
     buttons.forEach((button) => {
-        button.addEventListener("click", () => confetti());
+        button.addEventListener("click", () => confetti({
+            particleCount: 50,
+            origin: {
+                x: 0.6
+            }
+        }));
     });
 </script>
