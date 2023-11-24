@@ -4,6 +4,8 @@ import { Image } from "astro:assets";
 import aivferrors from "../../assets/AIVFErrors.png";
 import aivffunctions from "../../assets/AIVFFunctions.png";
 import aivfmobile from "../../assets/AIVFMobile.png";
+import aivfthreshold from "../../assets/AIVFThreshold.png";
+import aivfpopout from "../../assets/AIVFImagePopout.png";
 ---
 
 <Layout title="AIVision Food -- Gabriel Yap">
@@ -35,7 +37,7 @@ import aivfmobile from "../../assets/AIVFMobile.png";
             />
         </div>
         <section
-            class="flex flex-col items-start justify-center gap-4 pt-12 md:max-w-full md:flex-row"
+            class="flex flex-col-reverse items-start justify-center gap-4 pt-12 md:max-w-full md:flex-row"
         >
             <div class="flex flex-col w-full md:w-1/2">
                 <div class="text-xl font-light">
@@ -50,12 +52,14 @@ import aivfmobile from "../../assets/AIVFMobile.png";
                     correct the issue, but it got the job done! I spent more
                     time on the issue, and thought to myself, "maybe I have to
                     look at the bigger picture". By focusing more on the parent
-                    components, I eventually came up with an elegant solution which
-                    involved <span class = "font-semibold">refactoring the React code</span>.
-                    As a result, I reduced the amount of API calls needed by 50%, fixed
-                    the issue of data improperly loading, and because of that, also
-                    stopped the website from crashing! <br><br>
-                    *Image blurred intentionally.
+                    components, I eventually came up with an elegant solution
+                    which involved <span class="font-semibold"
+                        >refactoring the React code</span
+                    >. As a result, I reduced the amount of API calls needed by
+                    50%, fixed the issue of data improperly loading, and because
+                    of that, also stopped the website from crashing! <br /><br
+                    />
+                     *Image blurred intentionally.
                 </div>
             </div>
             <div class="flex w-full md:w-1/2">
@@ -79,16 +83,16 @@ import aivfmobile from "../../assets/AIVFMobile.png";
         <section
             class="flex flex-col items-start justify-center gap-8 pt-12 md:max-w-full md:flex-row"
         >
-        <div class="flex w-full md:w-1/2">
-            <Image
-                src={aivffunctions}
-                alt="aivffunctions"
-                width={750}
-                height={600}
-                loading="eager"
-                quality={100}
-            />
-        </div>
+            <div class="flex w-full md:w-1/2">
+                <Image
+                    src={aivffunctions}
+                    alt="aivffunctions"
+                    width={750}
+                    height={600}
+                    loading="eager"
+                    quality={100}
+                />
+            </div>
             <div class="flex flex-col w-full md:w-1/2">
                 <div class="text-xl font-light">
                     <div class="font-bold">Implementing New Features</div>
@@ -110,13 +114,10 @@ import aivfmobile from "../../assets/AIVFMobile.png";
                     available through the mobile app.
                 </div>
             </div>
-            
         </section>
         <section
             class="flex flex-col-reverse items-start justify-center gap-4 pt-12 md:flex-row md:max-w-full border-0"
         >
-           
-
             <div class="flex flex-col w-full md:w-1/2">
                 <div class="text-xl font-light">
                     <div class="font-bold">Fine-tuning frontend elements</div>
@@ -139,24 +140,73 @@ import aivfmobile from "../../assets/AIVFMobile.png";
                 </div>
             </div>
             <div
-            class="flex flex-row object-fill w-full md:w-1/2 border- border-red-400"
-        >
-            <Image
-                src={aivfmobile}
-                alt="aivfmobile"
-                width={750}
-                height={600}
-                loading="eager"
-                quality={100}
-            />
-        </div>
+                class="flex flex-row object-fill w-full md:w-1/2 border- border-red-400"
+            >
+                <Image
+                    src={aivfmobile}
+                    alt="aivfmobile"
+                    width={750}
+                    height={600}
+                    loading="eager"
+                    quality={100}
+                />
+            </div>
         </section>
         <div class="my-12">
-            <h1 class="flex justify-center text-4xl my-4">Screenshots and Video Demo</h1>
+            <h1 class="flex justify-center text-4xl my-4">
+                Screenshots
+            </h1>
             <hr
                 class="w-48 h-1 mx-auto my-4 bg-gray-200 border-0 rounded md:my-10 dark:bg-gray-700"
             />
         </div>
+        <section
+            class="grid md:grid-cols-2 auto-rows-max items-start justify-center pt-12 gap-8 gap-y-16"
+        >
+            <div class="flex flex-col justify-center mx-auto font-light">
+                <Image
+                    src={aivfthreshold}
+                    alt="aivfthreshold"
+                    width={1525}
+                    height={884}
+                    loading="eager"
+                    quality={100}
+                />
+                <div class="flex flex-col w-full">
+                    <div class="text-xl font-light max-w-md:max-w-full">
+                        <div class="font-bold">
+                            Insect Count Color Thresholds
+                        </div>
+                         Another feature that was present on the mobile app that
+                        I integrated into the website using <span
+                            class="font-bold">React states</span
+                        >.
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center mx-auto font-light">
+                <Image
+                    src={aivfpopout}
+                    alt="aivfpopout"
+                    width={1525}
+                    height={884}
+                    loading="eager"
+                    quality={100}
+                />
+                <div class="flex flex-col w-full">
+                    <div class="text-xl font-light">
+                        <div class="font-bold">Image Popout</div>
+                         One of my first bug fixes was to solve the issue of the
+                        image popout closing regardless of cursor location,
+                        which also disabled the image arrows that are supposed
+                        to switch the popout to the next image. By using
+                        Javascript propagation logic, I specified that only when
+                        the user clicks on the DOM outside of the popout, it
+                        would be closed. This also re-enabled the image arrow functionality. 
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </Layout>
 
