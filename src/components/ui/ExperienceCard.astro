@@ -19,7 +19,7 @@ const { title, body, href, thumbnail, repo } = Astro.props;
 			{title}
 		</h2>
 		<p class = "lg:text-2xl text-gray-700 dark:text-gray-400">
-			{body}
+			{body} {repo == "" ? null : <a href = {repo} class = "font-semibold underline text-blue-700 dark:text-blue-500">GitHub Repo</a>}
 		</p>
 		<a href = {href} class = "flex w-fit px-8 py-2 border-2 border-black dark:border-white hover:bg-slate-300 dark:hover:bg-slate-700" aria-label = "SEE MORE">
 			SEE MORE
